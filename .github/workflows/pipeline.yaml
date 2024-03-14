@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: '0'
-      - name: Bump version and push tag
+      - name: Bump version and push tags
         uses: anothrNick/github-tag-action@1.64.0
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
