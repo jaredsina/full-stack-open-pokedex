@@ -25,5 +25,5 @@ jobs:
         run: echo "$COMMIT_MESSAGES"
       - name: echo if commit messages do not have skip
         env:
-          COMMIT_MESSAGES: join(${{ toJson(github.event.commits.*.message) }},' ')
+          COMMIT_MESSAGES: ${{ toJson(join(github.event.commits.*.message), ' ') }}
         run: echo "$COMMIT_MESSAGES"
